@@ -43,7 +43,7 @@
   </platform>
 
   <platform name="android">
-    <dependency id="com.google.playservices" />
+    <dependency id="com.google.playservices" commit="00f511a8ce332d4586f067240460bfe978ace2ae" />
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="UniversalAnalytics">

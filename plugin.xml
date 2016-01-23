@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.danielcwilson.plugins.googleanalytics"
+    id="com.davistan.plugins.googleanalytics"
     version="0.7.0">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
@@ -43,17 +43,16 @@
   </platform>
 
   <platform name="android">
-    <dependency id="com.google.playservices" url="https://github.com/MobileChromeApps/google-play-services.git" commit="00f511a8ce332d4586f067240460bfe978ace2ae" />
-
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="UniversalAnalytics">
-        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+        <param name="android-package" value="com.davistan.plugins.analytics.UniversalAnalyticsPlugin" />
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.INTERNET" />
       <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     </config-file>
-    <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
+    <source-file src="src/android/analytics.jar" target-dir="libs"/>
+    <source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/davistan/plugins/analytics" />
   </platform>
 </plugin>
